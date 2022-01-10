@@ -15,7 +15,7 @@ window.onload = () => {
 }
 
 
-function creatDivs(col , rows) {
+function createDivs(col , rows) {
     for(let i = 0;i < (col * rows); i++) {
         const div = document.createElement('div') 
         container.style.gridTemplateColumns = `repeat(${col}, 1fr)`;
@@ -23,7 +23,7 @@ function creatDivs(col , rows) {
         container.appendChild(div).classList.add('box')
     }
 }
-creatDivs(16,16)
+createDivs(16,16)
 
 function grayColor() { 
     
@@ -31,7 +31,7 @@ function grayColor() {
     btnGray.textContent = "GRAY"
     btnGray.addEventListener('click', () => {
         boxs.forEach(box => box.addEventListener('mouseover', ()=> {
-            let GrayScale = `rgb(128,128,128)`
+            let GrayScale = `rgb(128,128,128)` 
             box.style.background = GrayScale;
         }))
     })
@@ -109,7 +109,7 @@ function reSize() {
         
         } else { 
             reSet();
-            creatDivs(user,user);
+            createDivs(user,user);
             grayColor();
             rgbColors();
             blackColor();
@@ -119,4 +119,4 @@ function reSize() {
     })
     buttonsContainer.appendChild(btnSize).classList.add('btn')
 }
-reSize()
+reSize() 
